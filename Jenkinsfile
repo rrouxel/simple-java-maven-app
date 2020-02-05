@@ -7,9 +7,6 @@ pipeline {
     }
     stages {
         stage('Build') {
-            environment {
-                SERVICE_CREDS = credentials('install:Lvon!476')
-            }
             steps {
                 sh 'mvn -B -DskipTests clean package' 
             }
